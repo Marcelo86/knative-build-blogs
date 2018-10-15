@@ -1,0 +1,14 @@
+= Knative Build Blogs
+The repository to hold the sample code that will be referred in the Knative Build blog series.
+
+== Blogs
+
+=== Part-1
+* Blog: [WIP]
+* Sources: link:./part-1/README.adoc[Build your Kubernetes Serverless Service]
+
+== Running samples locally
+
+All the samples in this blog will be run using https://github.com/minishift/minishift[minishift], the single node https://www.okd.io/[OKD] cluster that can be used for development purposes. 
+
+To setup Knative components (serving, build etc.,) follow the instructions from https://github.com/redhat-developer-demos/knative-minishift/blob/master/README.adoc[here]
