@@ -9,7 +9,7 @@ spec:
         serviceAccountName: builder
         source:
           git:
-            url: https://github.com/kameshsampath/knative-serving-blogs
+            url: https://github.com/workspace7/knative-build-blogs
             revision: master
         template:
           name: java-buildah
@@ -17,7 +17,7 @@ spec:
             - name: IMAGE_NAME
               value: "greeter:0.0.1"
             - name: CONTEXT_DIR
-              value: "part-2/java"
+              value: "part-1/java"
             - name: JAVA_APP_NAME
               value: "greeter.jar"
             - name: CACHE
