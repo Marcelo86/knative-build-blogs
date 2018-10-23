@@ -37,6 +37,16 @@ oc -n knative-serving get cm config-controller -oyaml | yq w - data.registriesSk
 
 The source folder **part-2** will be referred as `$PROJECT_HOME`. The following section details on how to build either Java or Node Application.
 
+[TIP]
+====
+Time out is configurable as well, for this demo sake let us change the scale-to-zero-threshold from 5m to 30s and the scale-to-zero-grace-period from 2m to 1m.
+
+[source,bash]
+----
+oc -n knative-serving get cm config-autoscaler -o yaml | yq w -  data.scale-to-zero-threshold 30s | kubectl apply -f -
+oc -n knative-serving get cm config-autoscaler -o yaml | yq w -  data.scale-to-zero-grace-period 1m | kubectl apply -f -
+----
+
 === Building 
 
 The application uses Knative-build to build the application.
