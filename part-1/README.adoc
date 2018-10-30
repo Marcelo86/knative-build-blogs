@@ -47,6 +47,8 @@ oc -n knative-serving get cm config-autoscaler -o yaml | yq w -  data.scale-to-z
 oc -n knative-serving get cm config-autoscaler -o yaml | yq w -  data.scale-to-zero-grace-period 1m | kubectl apply -f -
 ----
 
+====
+
 === Building 
 
 The application uses Knative-build to build the application.
